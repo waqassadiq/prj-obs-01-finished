@@ -38,5 +38,14 @@ export class ShoppingListService {
 
     this.ingredientsChanged.next(this.ingredients.slice());
   }
+
+  deleteIngredient(index: number){
+    console.log('deleting index: ' + index);
+    // must add 1 here, to tell only to splice 1 item, otherwise the whole list would be empty
+    this.ingredients.splice(index, 1);
+    console.log(this.ingredients);
+
+    this.ingredientsChanged.next(this.ingredients.slice());
+  }
   
 }
