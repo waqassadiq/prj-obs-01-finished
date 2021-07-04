@@ -58,21 +58,32 @@
                 <input 
                   type="text" 
                   formControlName='name'
+                  style="margin-top: 10px;"
                   class="form-control">
               </div>
               <div class="col-xs-2">
                 <input 
                   type="number" 
                   formControlName='amount'
-
+                  style="margin-top: 10px;"
                   class="form-control">
               </div>
-              <div class="col-xs-2">
+              <div class="col-xs-2" 
+              style="margin-top: 10px;">
                 <button class="btn btn-danger">X</button>
               </div>
             </div>
+            <hr>
+            <div class="row">
+              <div class="col-xs-12">
+                <button 
+                type="button"
+                  class="btn btn-success"
+                  (click)="onAddIngredient()">Add Ingredient</button>
+              </div>
+            </div>
           </div>
-        </div>
+         </div>
       </div>
 
     </form>
