@@ -30,5 +30,13 @@ export class ShoppingListService {
   getIngredient(index: number){
     return this.ingredients[index];
   }
+
+  updateIngredient(index: number, neewIngredient: Ingredient){
+    console.log(neewIngredient)
+    this.ingredients[index] = neewIngredient;
+    console.log(this.ingredients)
+
+    this.ingredientsChanged.next(this.ingredients.slice());
+  }
   
 }
