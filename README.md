@@ -47,3 +47,12 @@ In the template, you can then use:
 *ngFor="let ingredientCtrl of controls; let i = index"
 
 This adjustment is required due to the way TS works and Angular parses your templates (it doesn't understand TS there).
+
+## Deleting all Items in a FormArray
+As of Angular 8+, there's a new way of clearing all items in a FormArray.
+
+    (<FormArray>this.recipeForm.get('ingredients')).clear();
+
+The clear() method automatically loops through all registered FormControls (or FormGroups) in the FormArray and removes them.
+
+It's like manually creating a loop and calling removeAt() for every item.
